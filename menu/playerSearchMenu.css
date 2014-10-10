@@ -1,0 +1,19 @@
+.search-result {
+    display: table;
+    line-height: 30px;
+    padding: 10px 20px;
+}
+
+.search-result:nth-child(odd) {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.search-result span {
+    display: table-cell;
+    width: 100%;
+}
+
+.search-result button {
+    display: table-cell;
+    margin-left: 16px;
+}

@@ -1,0 +1,225 @@
+{
+    "archer": {
+        "idle": {
+            "spriteSheet": "archer - idle",
+            "tileHeight": 60,
+            "tileWidth": 60,
+            "frameCount": 32,
+            "speed": 0.06,
+            "isLooping": true,
+            "frames": {
+                "0": 10
+            }
+        },
+
+        "idleAction1": {
+            "spriteSheet": "archer - idleAction1",
+            "tileHeight": 60,
+            "tileWidth": 60,
+            "frameCount": 16,
+            "speed": 0.06,
+            "frames": {
+                "8": 0.75
+            }
+        },
+
+        "run": {
+            "spriteSheet": "archer - run",
+            "tileHeight": 60,
+            "tileWidth": 60,
+            "frameCount": 16,
+            "speed": 0.06,
+            "isLooping": true
+        },
+
+        "attack": {
+            "spriteSheet": "archer - attack",
+            "tileHeight": 70,
+            "tileWidth": 70,
+            "frameCount": 32,
+            "speed": 0.06,
+            "frames": {
+                "20": 0.18
+            }
+        },
+
+        "death": {
+            "spriteSheet": "archer - death",
+            "tileHeight": 70,
+            "tileWidth": 70,
+            "frameCount": 32,
+            "speed": 0.06
+        }
+    },
+
+    "rogue": {
+        "idle": {
+            "spriteSheet": "shield - idle",
+            "tileHeight": 80,
+            "tileWidth": 80,
+            "frameCount": 32,
+            "speed": 0.1,
+            "isLooping": true,
+            "frames": {
+                "31": 5
+            }
+        },
+
+        "run": {
+            "spriteSheet": "shield - run",
+            "tileHeight": 60,
+            "tileWidth": 60,
+            "frameCount": 16,
+            "speed": 0.06,
+            "isLooping": true
+        },
+
+        "attack": {
+            "spriteSheet": "shield - attack",
+            "tileHeight": 80,
+            "tileWidth": 80,
+            "frameCount": 32,
+            "speed": 0.06
+        },
+
+        "death": {
+            "spriteSheet": "shield - death",
+            "tileHeight": 70,
+            "tileWidth": 70,
+            "frameCount": 32,
+            "speed": 0.06
+        }
+    },
+
+    "shield": {
+        "idle": {
+            "spriteSheet": "shield - idle",
+            "tileHeight": 80,
+            "tileWidth": 80,
+            "frameCount": 32,
+            "speed": 0.1,
+            "isLooping": true,
+            "frames": {
+                "31": 5
+            }
+        },
+
+        "idleAction1": {
+            "spriteSheet": "shield - idleAction1",
+            "tileHeight": 65,
+            "tileWidth": 65,
+            "frameCount": 16,
+            "speed": 0.06,
+            "frames": {
+                "8": 0.75
+            }
+        },
+
+        "run": {
+            "spriteSheet": "shield - run",
+            "tileHeight": 60,
+            "tileWidth": 60,
+            "frameCount": 16,
+            "speed": 0.06,
+            "isLooping": true
+        },
+
+        "attack": {
+            "spriteSheet": "shield - attack",
+            "tileHeight": 80,
+            "tileWidth": 80,
+            "frameCount": 32,
+            "speed": 0.06
+        },
+
+        "evade": {
+            "spriteSheet": "shield - defend",
+            "tileHeight": 60,
+            "tileWidth": 60,
+            "frameCount": 16,
+            "speed": 0.06,
+            "reverseOnComplete": true,
+            "frames": {
+                "15": 0.25
+            }
+        },
+
+        "death": {
+            "spriteSheet": "shield - death",
+            "tileHeight": 70,
+            "tileWidth": 70,
+            "frameCount": 32,
+            "speed": 0.06
+        }
+    },
+
+    "warrior": {
+        "idle": {
+            "spriteSheet": "warrior - idle",
+            "tileHeight": 70,
+            "tileWidth": 70,
+            "frameCount": 32,
+            "speed": 0.06,
+            "isLooping": true,
+            "frames": {
+                "20": 2
+            }
+        },
+
+        "idleLoop": {
+            "spriteSheet": "warrior - idleLoop",
+            "tileHeight": 65,
+            "tileWidth": 65,
+            "frameCount": 16,
+            "speed": 0.06,
+            "isLooping": true
+        },
+
+        "idleAction1": {
+            "spriteSheet": "warrior - idleAction1",
+            "tileHeight": 75,
+            "tileWidth": 75,
+            "frameCount": 16,
+            "speed": 0.06,
+            "frames": {
+                "8": 2
+            }
+        },
+
+        "run": {
+            "spriteSheet": "warrior - run",
+            "tileHeight": 75,
+            "tileWidth": 75,
+            "frameCount": 16,
+            "speed": 0.06,
+            "isLooping": true
+        },
+
+        "attack": {
+            "spriteSheet": "warrior - attack",
+            "tileHeight": 80,
+            "tileWidth": 80,
+            "frameCount": 32,
+            "speed": 0.06
+        },
+
+        "overhead": {
+            "spriteSheet": "warrior - overhead",
+            "tileHeight": 85,
+            "tileWidth": 85,
+            "frameCount": 32,
+            "speed": 0.06,
+            "frames": {
+                "22": 0.25
+            }
+        },
+
+        "death": {
+            "spriteSheet": "warrior - death",
+            "tileHeight": 75,
+            "tileWidth": 75,
+            "frameCount": 32,
+            "speed": 0.06
+        }
+    }
+}

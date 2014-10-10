@@ -1,0 +1,40 @@
+#login {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    margin: 0 auto;
+    width: 240px;
+}
+
+#login .registration-panel {
+    margin-top: 40px;
+}
+
+input, button {
+    display: inline-block;
+    width: 100%;
+    padding: 6px;
+    margin: 0;
+}
+
+input {
+    margin: 0 0 8px 0;
+}
+
+#errorMessage {
+    padding: 6px;
+    text-align: center;
+    margin-bottom: 8px;
+    border-radius: 2px;
+    border: 1px solid #ff2828;
+    background: #dfb9b9;
+    color: #b90000;
+}
+
+#errorMessage:empty {
+    display: none;
+}

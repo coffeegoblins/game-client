@@ -1,0 +1,34 @@
+{
+    "music": {
+        "soundtrack1": {
+            "sounds": "Soundtrack1",
+            "loop": true
+        },
+        "soundtrack2": {
+            "sounds": "Soundtrack2",
+            "loop": true
+        }
+    },
+
+    "effects": {
+        "strike": [{"name":"SwordHit2", "delay":1000}, "SwordHit2"],
+        "dualStrike": ["SwordHit2", "SwordHit"],
+        "twoHandedStrike": ["DoubleHandedSwordDraw", "DoubleHandedSwordHit"],
+
+        "bow1": ["BowStrung", "BowFired", "BowHit"],
+        "bow2": ["BowStrung2", "BowFired2", "BowHit2"],
+        "sword1": ["SwordDraw", "SwordHit"],
+        "sword2": ["SwordDraw", "SwordHit2"],
+        "dualSword1": ["TwoSwordsHit1", "TwoSwordsHit2"],
+        "shieldBash1": "ShieldBash",
+        "shieldBash2": "ShieldBash2",
+        "bigSword1": ["DoubleHandedSwordDraw", "DoubleHandedSwordHit"],
+        "bigSword2": ["DoubleHandedSwordDraw", "DoubleHandedSwordHit2"],
+        "bigSwordMiss1": ["DoubleHandedSwordDraw", "DoubleHandedSwordMiss1"],
+        "bigSwordMiss2": ["DoubleHandedSwordDraw", "DoubleHandedSwordMiss2"],
+        "bigSwordBlock1": "DoubleHandedSwordBlocking",
+        "bigSwordBlock2": "DoubleHandedSwordBlocking2",
+        "bigSwordBlock3": "DoubleHandedSwordBlocking3",
+        "bigSwordBlock4": "DoubleHandedSwordBlocking4"
+    }
+}

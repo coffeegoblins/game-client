@@ -1,0 +1,99 @@
+<link rel="stylesheet" type="text/css" href="./menu/battleConfigurationMenu.css" />
+<div class="battle-config">
+    <div class="level-config config-column">
+        <label><span>Turns: </span>
+            <input id="turn-slider" type="range" min="10" max="100" value="100" /><span></span>
+        </label>
+        <label><span>Units: </span>
+            <input id="unit-slider" type="range" /><span></span>
+        </label>
+        <label><span>Level: </span>
+            <select id="level-select"></select>
+        </label>
+        <img id="level-preview" />
+    </div>
+    <div class="unit-config config-column">
+        <nav>
+            <ul class="tab-header">
+                <!--
+                <li class="tab" data-unit="shield">
+    <div class="tab-header-content">
+        <div class="unit-type"></div>
+        <div class="unit-count"></div>
+    </div>
+</li>
+<li class="tab" data-unit="warrior">
+    <div class="tab-header-content">
+        <div class="unit-type"></div>
+        <div class="unit-count"></div>
+    </div>
+</li>
+<li class="tab" data-unit="archer">
+    <div class="tab-header-content">
+        <div class="unit-type"></div>
+        <div class="unit-count"></div>
+    </div>
+</li>
+<li class="tab" data-unit="rogue">
+    <div class="tab-header-content">
+        <div class="unit-type"></div>
+        <div class="unit-count"></div>
+    </div>
+</li>
+-->
+            </ul>
+        </nav>
+        <div class="tab-content-container">
+            <div class="tab-content" data-unit="Shield">
+                <div class="unit-preview"></div>
+                <h2>Shield</h2>
+                <p class="description">A stalwart defensive unit, competent in combat and extremely effective at blocking ranged attacks.</p>
+                <ul>
+                    <li>A single handed sword strike.</li>
+                    <li>A stunning shield bash.</li>
+                    <li>A defensive stance capable of protecting nearby units.</li>
+                </ul>
+            </div>
+            <div class="tab-content" data-unit="Warrior">
+                <div class="unit-preview"></div>
+                <h2>Warrior</h2>
+                <p class="description">An offensive powerhouse, capable of smashing through shields and slashing multiple targets.</p>
+                <ul>
+                    <li>A two handed strike.</li>
+                    <li>A staggering horizontal sweep, capable of felling multiple targets at once.</li>
+                    <li>A powerful overhead strike, capable of cleaving through shields and delivering tremendous damage.</li>
+                </ul>
+            </div>
+            <div class="tab-content" data-unit="Archer">
+                <div class="unit-preview"></div>
+                <h2>Archer</h2>
+                <p class="description">A long range unit, extremely effective when kept at a safe range.</p>
+                <ul>
+                    <li>A long range direct arrow shot.</li>
+                    <li>A high-arching arrow that can reach units behind obstacles.</li>
+                    <li>A desperate melee attack usable at close range.</li>
+                </ul>
+            </div>
+            <div class="tab-content" data-unit="Rogue">
+                <div class="unit-preview"></div>
+                <h2>Rogue</h2>
+                <p class="description">A highly mobile and versatile unit, best used as a supplementary force.</p>
+                <ul>
+                    <li>A quick slice with dual blades.</li>
+                    <li>A short range thrown dagger.</li>
+                    <li>A precise stab that's especially lethal when executed from behind.</li>
+                </ul>
+            </div>
+            <div class="button-panel">
+                <div class="image-button" data-button="add"></div>
+                <div class="image-button disabled" data-button="remove"></div>
+            </div>
+        </div>
+    </div>
+    <footer class="clear-fix">
+        <div class="button-panel">
+            <button data-button="confirm" disabled>Play</button>
+            <button data-button="cancel">Cancel</button>
+        </div>
+    </footer>
+</div>

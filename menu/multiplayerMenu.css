@@ -1,0 +1,51 @@
+#header {
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: right;
+}
+#notificationsButton {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 10px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.75);
+}
+#notificationsButton > * {
+    vertical-align: middle;
+}
+#playerSearch {
+    display: table-cell;
+    vertical-align: middle;
+    padding-right: 10px;
+}
+#content {
+    position: absolute;
+    top: 40px;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    background: rgba(255, 255, 255, .5);
+}
+#footer {
+    position: absolute;
+    display: table;
+    width: 100%;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: right;
+    bottom: 0;
+}
+#logoutButton {
+    display: table-cell;
+    vertical-align: middle;
+    padding-right: 10px;
+    font-weight: 700;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.75);
+}

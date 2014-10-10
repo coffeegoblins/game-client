@@ -1,0 +1,68 @@
+#notifications {
+    position: absolute;
+    overflow-y: auto;
+    z-index: 1;
+    left: 0;
+    top: 40px;
+    bottom: 40px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.5);
+    border-right: 1px solid #cdcdcd;
+    padding: 16px;
+}
+
+#notifications.collapsed {
+    left: -300px;
+}
+
+#notifications > div {
+    margin-bottom: 16px;
+}
+
+#notifications > div:last-child {
+    margin-bottom: 0;
+}
+
+.notification {
+    border: 1px solid #cdcdcd;
+    background: rgba(255, 255, 255, 1);
+}
+
+.levelPreview {
+    float: left;
+    text-align: center;
+    padding: 5px;
+}
+
+.levelImage {
+    width: 96px;
+    height: 48px;
+}
+
+.levelName {
+    font-weight: 700;
+}
+
+.username, #notifications h2 {
+    margin: 0;
+    text-align: right;
+    padding: 10px;
+}
+
+.buttons {
+    clear: both;
+}
+
+.acceptButton, .declineButton {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-left: 0;
+    text-align: center;
+    display: inline-block;
+    width: 50%;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.declineButton {
+    border-right: 0;
+}
