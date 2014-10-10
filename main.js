@@ -8,6 +8,7 @@ require(['core/src/domEvents', 'core/src/scheduler', 'core/src/commandManager', 
             {
                 console.log(e.error.message);
                 console.log(e.error.stack);
+                document.body.innerHTML = e.error.message;
             }
         });
 
