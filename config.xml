@@ -21,5 +21,4 @@
     </gap:config-file>
 
     <access origin="*" />
-    <access subdomains="true" origin="http://www.rhcloud.com" />
 </widget>
