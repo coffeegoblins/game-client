@@ -16,12 +16,15 @@ require(['core/src/domEvents', 'core/src/scheduler', 'core/src/commandManager', 
         document.addEventListener('deviceready', function ()
         {
             // device APIs are available
+            console.log("Test 2");
         }, false);
 
         function onDocumentReady()
         {
+            console.log("Test 1");
             Scheduler.start();
             MainMenu.show(MenuNavigator.createContentDiv());
+            console.log("Test 3");
         }
 
         if (document.readyState === 'complete')
