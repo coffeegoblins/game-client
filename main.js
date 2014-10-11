@@ -1,3 +1,15 @@
+require.config(
+{
+    baseUrl: '',
+    shim:
+    {},
+    paths:
+    {
+        text: 'lib/text',
+        jsonLoader: 'core/src/functions/loadRemoteJSON'
+    }
+});
+
 require(['core/src/domEvents', 'core/src/scheduler', 'core/src/commandManager', 'menu/menuNavigator', 'menu/mainMenu'],
     function (DomEvents, Scheduler, CommandManager, MenuNavigator, MainMenu)
     {
