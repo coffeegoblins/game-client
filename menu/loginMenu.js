@@ -1,6 +1,7 @@
 define(['text!menu/loginMenu.html', 'menu/menuNavigator', 'lib/socket.io'], function (Template, MenuNavigator, io)
 {
     var SERVER_URL = 'http://nodejs-coffeegoblins.rhcloud.com';
+    var SOCKET_IO_PORT = '8000';
     // var SERVER_URL = 'http://127.0.0.1:3000';
 
     return {
@@ -88,7 +89,7 @@ define(['text!menu/loginMenu.html', 'menu/menuNavigator', 'lib/socket.io'], func
 
         connectSocket: function (token, successCallback, errorCallback)
         {
-            var socket = io(SERVER_URL,
+            var socket = io(SERVER_URL + ':' + SOCKET_IO_PORT,
             {
                 query: "token=" + token,
                 forceNew: true
