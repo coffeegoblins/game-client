@@ -5,7 +5,7 @@
 
     <preference name="phonegap-version" value="3.5.0" />
 
-    <name>Sample Config.xml</name>
+    <name>JavaScript Game</name>
 
     <description>
         An example for phonegap build docs.
@@ -17,6 +17,7 @@
 
     <gap:config-file platform="android" parent="/manifest">
         <application android:debuggable="true" />
+        <uses-sdk android:minSdkVersion="17" android:targetSdkVersion="19" />
     </gap:config-file>
 
 </widget>
