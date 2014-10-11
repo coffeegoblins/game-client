@@ -20,4 +20,5 @@
         <uses-sdk android:minSdkVersion="17" android:targetSdkVersion="19" />
     </gap:config-file>
 
+    <access origin="http://nodejs-coffeegoblins.rhcloud.com" />
 </widget>
