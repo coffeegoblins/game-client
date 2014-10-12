@@ -102,6 +102,22 @@ define(['text!menu/loginMenu.html', 'menu/menuNavigator', 'lib/socket.io'], func
 
         sendRequest: function (route, data, callback)
         {
+            var testRequest = new XMLHttpRequest();
+            testRequest.open('GET', "http://www.google.com");
+            testRequest.onreadystatechange = function ()
+            {
+                if (request.readyState === 4)
+                {
+                    console.log("4");
+                    if (request.status === 200)
+                    {
+                        console.log("200");
+                    }
+                }
+            };
+
+            testRequest.send();
+
             var request = new XMLHttpRequest();
             request.open('POST', SERVER_URL + route.toString());
             request.overrideMimeType('application/json');
