@@ -18,6 +18,7 @@
     <gap:config-file platform="android" parent="/manifest">
         <application android:debuggable="true" />
         <uses-sdk android:minSdkVersion="17" android:targetSdkVersion="19" />
+        <uses-permission android:name="android.permission.INTERNET" />
     </gap:config-file>
 
     <access origin="*" />
