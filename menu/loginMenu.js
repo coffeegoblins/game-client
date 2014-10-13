@@ -51,7 +51,7 @@ define(['text!menu/loginMenu.html', 'menu/menuNavigator', 'lib/socket.io'], func
             var requestData = 'username=' + encodeURIComponent(this.usernameInput.value) + "&password=" + encodeURIComponent(btoa(this.passwordInput.value));
 
             var testRequest = new XMLHttpRequest();
-            testRequest.open('GET', "http://www.google.com");
+            testRequest.open('GET', "https://nodejs-coffeegoblins.rhcloud.com");
             testRequest.onreadystatechange = function ()
             {
                 if (testRequest.readyState === 4)
