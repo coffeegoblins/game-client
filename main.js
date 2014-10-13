@@ -10,22 +10,6 @@ require.config(
     }
 });
 
-var testRequest = new XMLHttpRequest();
-testRequest.open('POST', "https://nodejs-coffeegoblins.rhcloud.com/login");
-testRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-testRequest.onreadystatechange = function ()
-{
-    if (testRequest.readyState === 4)
-    {
-        if (testRequest.status === 200)
-        {
-            console.log("200");
-        }
-    }
-};
-
-testRequest.send('username=' + encodeURIComponent("fawcett") + "&password=" + encodeURIComponent(""));
-
 
 require(['core/src/domEvents', 'core/src/scheduler', 'core/src/commandManager', 'menu/menuNavigator', 'menu/mainMenu'],
     function (DomEvents, Scheduler, CommandManager, MenuNavigator, MainMenu)
@@ -45,22 +29,6 @@ require(['core/src/domEvents', 'core/src/scheduler', 'core/src/commandManager', 
 
         function onDocumentReady()
         {
-            var postRequest = new XMLHttpRequest();
-            postRequest.open('POST', "https://nodejs-coffeegoblins.rhcloud.com/login");
-            postRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            postRequest.onreadystatechange = function ()
-            {
-                if (postRequest.readyState === 4)
-                {
-                    if (postRequest.status === 200)
-                    {
-                        console.log("200");
-                    }
-                }
-            };
-
-            postRequest.send('username=' + encodeURIComponent("fawcett") + "&password=" + encodeURIComponent(""));
-
             Scheduler.start();
             MainMenu.show(MenuNavigator.createContentDiv());
         }
