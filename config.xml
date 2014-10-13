@@ -5,7 +5,7 @@
 
     <preference name="phonegap-version" value="3.5.0" />
 
-    <name>Ajax Test</name>
+    <name>Javascript Game</name>
 
     <description>
         An example for phonegap build docs.
