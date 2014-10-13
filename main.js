@@ -20,23 +20,32 @@ require(['core/src/domEvents', 'core/src/scheduler', 'core/src/commandManager', 
             {
                 console.log(e.error.message);
                 console.log(e.error.stack);
-                document.body.innerHTML = e.error.message;
             }
         });
 
         // Wait for device API libraries to load
-        document.addEventListener('deviceready', function ()
-        {
-            // device APIs are available
-            console.log("Test 2");
-        }, false);
+        document.addEventListener('deviceready', function () {}, false);
 
         function onDocumentReady()
         {
-            console.log("Test 1");
+            var postRequest = new XMLHttpRequest();
+            postRequest.open('POST', "https://nodejs-coffeegoblins.rhcloud.com/login");
+            postRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            postRequest.onreadystatechange = function ()
+            {
+                if (postRequest.readyState === 4)
+                {
+                    if (postRequest.status === 200)
+                    {
+                        console.log("200");
+                    }
+                }
+            };
+
+            postRequest.send('username=' + encodeURIComponent("fawcett") + "&password=" + encodeURIComponent(""));
+
             Scheduler.start();
             MainMenu.show(MenuNavigator.createContentDiv());
-            console.log("Test 3");
         }
 
         if (document.readyState === 'complete')
