@@ -16,7 +16,7 @@
     </author>
 
     <gap:config-file platform="android" parent="/manifest">
-        <application android:debuggable="true" />
+        <application android:debuggable="true" android:hardwareAccelerated="false" />
         <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="19" />
         <uses-permission android:name="android.permission.INTERNET" />
     </gap:config-file>
