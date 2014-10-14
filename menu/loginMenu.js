@@ -1,9 +1,8 @@
 define(['text!menu/loginMenu.html', 'menu/menuNavigator', 'lib/socket.io'], function (Template, MenuNavigator, io)
 {
-    var SERVER_URL = 'http://127.0.0.1:8080';
-    var SOCKET_IO_URL = 'http://127.0.0.1';
-    var SOCKET_IO_PORT = '8080';
-    // var SERVER_URL = 'http://127.0.0.1:3000';
+    var SERVER_URL = 'https://nodejs-coffeegoblins.rhcloud.com';
+    var SOCKET_IO_URL = 'ws://nodejs-coffeegoblins.rhcloud.com';
+    var SOCKET_IO_PORT = '8000';
 
     return {
         show: function (parentElement, loginSuccessCallback)
