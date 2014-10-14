@@ -98,7 +98,11 @@ define(['core/src/imageCache', 'core/src/spriteSheet', 'text!../content/animatio
     RenderableSoldier.prototype.onDirectionChange = function ()
     {
         var directionAnimation = directions[this.unit.direction.y + 1][this.unit.direction.x + 1];
-        this.spriteSheets[this.unit.state].playAnimation(directionAnimation);
+
+        if (this.spriteSheets[this.unit.state])
+        {
+            this.spriteSheets[this.unit.state].playAnimation(directionAnimation);
+        }
     };
 
     RenderableSoldier.prototype.onAnimationComplete = function (animation)

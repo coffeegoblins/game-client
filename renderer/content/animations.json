@@ -1,29 +1,35 @@
 {
-    "archer": {
-        "idle": {
+    "Archer":
+    {
+        "idle":
+        {
             "spriteSheet": "archer - idle",
             "tileHeight": 60,
             "tileWidth": 60,
             "frameCount": 32,
             "speed": 0.06,
             "isLooping": true,
-            "frames": {
+            "frames":
+            {
                 "0": 10
             }
         },
 
-        "idleAction1": {
+        "idleAction1":
+        {
             "spriteSheet": "archer - idleAction1",
             "tileHeight": 60,
             "tileWidth": 60,
             "frameCount": 16,
             "speed": 0.06,
-            "frames": {
+            "frames":
+            {
                 "8": 0.75
             }
         },
 
-        "run": {
+        "run":
+        {
             "spriteSheet": "archer - run",
             "tileHeight": 60,
             "tileWidth": 60,
@@ -32,18 +38,21 @@
             "isLooping": true
         },
 
-        "attack": {
+        "attack":
+        {
             "spriteSheet": "archer - attack",
             "tileHeight": 70,
             "tileWidth": 70,
             "frameCount": 32,
             "speed": 0.06,
-            "frames": {
+            "frames":
+            {
                 "20": 0.18
             }
         },
 
-        "death": {
+        "death":
+        {
             "spriteSheet": "archer - death",
             "tileHeight": 70,
             "tileWidth": 70,
@@ -52,20 +61,24 @@
         }
     },
 
-    "rogue": {
-        "idle": {
+    "rogue":
+    {
+        "idle":
+        {
             "spriteSheet": "shield - idle",
             "tileHeight": 80,
             "tileWidth": 80,
             "frameCount": 32,
             "speed": 0.1,
             "isLooping": true,
-            "frames": {
+            "frames":
+            {
                 "31": 5
             }
         },
 
-        "run": {
+        "run":
+        {
             "spriteSheet": "shield - run",
             "tileHeight": 60,
             "tileWidth": 60,
@@ -74,7 +87,8 @@
             "isLooping": true
         },
 
-        "attack": {
+        "attack":
+        {
             "spriteSheet": "shield - attack",
             "tileHeight": 80,
             "tileWidth": 80,
@@ -82,7 +96,8 @@
             "speed": 0.06
         },
 
-        "death": {
+        "death":
+        {
             "spriteSheet": "shield - death",
             "tileHeight": 70,
             "tileWidth": 70,
@@ -91,31 +106,37 @@
         }
     },
 
-    "shield": {
-        "idle": {
+    "Shield":
+    {
+        "idle":
+        {
             "spriteSheet": "shield - idle",
             "tileHeight": 80,
             "tileWidth": 80,
             "frameCount": 32,
             "speed": 0.1,
             "isLooping": true,
-            "frames": {
+            "frames":
+            {
                 "31": 5
             }
         },
 
-        "idleAction1": {
+        "idleAction1":
+        {
             "spriteSheet": "shield - idleAction1",
             "tileHeight": 65,
             "tileWidth": 65,
             "frameCount": 16,
             "speed": 0.06,
-            "frames": {
+            "frames":
+            {
                 "8": 0.75
             }
         },
 
-        "run": {
+        "run":
+        {
             "spriteSheet": "shield - run",
             "tileHeight": 60,
             "tileWidth": 60,
@@ -124,7 +145,8 @@
             "isLooping": true
         },
 
-        "attack": {
+        "attack":
+        {
             "spriteSheet": "shield - attack",
             "tileHeight": 80,
             "tileWidth": 80,
@@ -132,19 +154,22 @@
             "speed": 0.06
         },
 
-        "evade": {
+        "evade":
+        {
             "spriteSheet": "shield - defend",
             "tileHeight": 60,
             "tileWidth": 60,
             "frameCount": 16,
             "speed": 0.06,
             "reverseOnComplete": true,
-            "frames": {
+            "frames":
+            {
                 "15": 0.25
             }
         },
 
-        "death": {
+        "death":
+        {
             "spriteSheet": "shield - death",
             "tileHeight": 70,
             "tileWidth": 70,
@@ -153,20 +178,24 @@
         }
     },
 
-    "warrior": {
-        "idle": {
+    "Warrior":
+    {
+        "idle":
+        {
             "spriteSheet": "warrior - idle",
             "tileHeight": 70,
             "tileWidth": 70,
             "frameCount": 32,
             "speed": 0.06,
             "isLooping": true,
-            "frames": {
+            "frames":
+            {
                 "20": 2
             }
         },
 
-        "idleLoop": {
+        "idleLoop":
+        {
             "spriteSheet": "warrior - idleLoop",
             "tileHeight": 65,
             "tileWidth": 65,
@@ -175,18 +204,21 @@
             "isLooping": true
         },
 
-        "idleAction1": {
+        "idleAction1":
+        {
             "spriteSheet": "warrior - idleAction1",
             "tileHeight": 75,
             "tileWidth": 75,
             "frameCount": 16,
             "speed": 0.06,
-            "frames": {
+            "frames":
+            {
                 "8": 2
             }
         },
 
-        "run": {
+        "run":
+        {
             "spriteSheet": "warrior - run",
             "tileHeight": 75,
             "tileWidth": 75,
@@ -195,7 +227,8 @@
             "isLooping": true
         },
 
-        "attack": {
+        "attack":
+        {
             "spriteSheet": "warrior - attack",
             "tileHeight": 80,
             "tileWidth": 80,
@@ -203,18 +236,21 @@
             "speed": 0.06
         },
 
-        "overhead": {
+        "overhead":
+        {
             "spriteSheet": "warrior - overhead",
             "tileHeight": 85,
             "tileWidth": 85,
             "frameCount": 32,
             "speed": 0.06,
-            "frames": {
+            "frames":
+            {
                 "22": 0.25
             }
         },
 
-        "death": {
+        "death":
+        {
             "spriteSheet": "warrior - death",
             "tileHeight": 75,
             "tileWidth": 75,
