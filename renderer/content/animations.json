@@ -3,7 +3,7 @@
     {
         "idle":
         {
-            "spriteSheet": "archer - idle",
+            "spriteSheet": "archerIdle",
             "tileHeight": 60,
             "tileWidth": 60,
             "frameCount": 32,
@@ -17,7 +17,7 @@
 
         "idleAction1":
         {
-            "spriteSheet": "archer - idleAction1",
+            "spriteSheet": "archerIdleAction1",
             "tileHeight": 60,
             "tileWidth": 60,
             "frameCount": 16,
@@ -30,7 +30,7 @@
 
         "run":
         {
-            "spriteSheet": "archer - run",
+            "spriteSheet": "archerRun",
             "tileHeight": 60,
             "tileWidth": 60,
             "frameCount": 16,
@@ -40,7 +40,7 @@
 
         "attack":
         {
-            "spriteSheet": "archer - attack",
+            "spriteSheet": "archerAttack",
             "tileHeight": 70,
             "tileWidth": 70,
             "frameCount": 32,
@@ -53,7 +53,7 @@
 
         "death":
         {
-            "spriteSheet": "archer - death",
+            "spriteSheet": "archerDeath",
             "tileHeight": 70,
             "tileWidth": 70,
             "frameCount": 32,
@@ -65,7 +65,7 @@
     {
         "idle":
         {
-            "spriteSheet": "shield - idle",
+            "spriteSheet": "shieldIdle",
             "tileHeight": 80,
             "tileWidth": 80,
             "frameCount": 32,
@@ -79,7 +79,7 @@
 
         "run":
         {
-            "spriteSheet": "shield - run",
+            "spriteSheet": "shieldRun",
             "tileHeight": 60,
             "tileWidth": 60,
             "frameCount": 16,
@@ -89,7 +89,7 @@
 
         "attack":
         {
-            "spriteSheet": "shield - attack",
+            "spriteSheet": "shieldAttack",
             "tileHeight": 80,
             "tileWidth": 80,
             "frameCount": 32,
@@ -98,7 +98,7 @@
 
         "death":
         {
-            "spriteSheet": "shield - death",
+            "spriteSheet": "shieldDeath",
             "tileHeight": 70,
             "tileWidth": 70,
             "frameCount": 32,
@@ -110,7 +110,7 @@
     {
         "idle":
         {
-            "spriteSheet": "shield - idle",
+            "spriteSheet": "shieldIdle",
             "tileHeight": 80,
             "tileWidth": 80,
             "frameCount": 32,
@@ -124,7 +124,7 @@
 
         "idleAction1":
         {
-            "spriteSheet": "shield - idleAction1",
+            "spriteSheet": "shieldIdleAction1",
             "tileHeight": 65,
             "tileWidth": 65,
             "frameCount": 16,
@@ -137,7 +137,7 @@
 
         "run":
         {
-            "spriteSheet": "shield - run",
+            "spriteSheet": "shieldRun",
             "tileHeight": 60,
             "tileWidth": 60,
             "frameCount": 16,
@@ -147,7 +147,7 @@
 
         "attack":
         {
-            "spriteSheet": "shield - attack",
+            "spriteSheet": "shieldAttack",
             "tileHeight": 80,
             "tileWidth": 80,
             "frameCount": 32,
@@ -156,7 +156,7 @@
 
         "evade":
         {
-            "spriteSheet": "shield - defend",
+            "spriteSheet": "shieldDefend",
             "tileHeight": 60,
             "tileWidth": 60,
             "frameCount": 16,
@@ -170,7 +170,7 @@
 
         "death":
         {
-            "spriteSheet": "shield - death",
+            "spriteSheet": "shieldDeath",
             "tileHeight": 70,
             "tileWidth": 70,
             "frameCount": 32,
@@ -182,7 +182,7 @@
     {
         "idle":
         {
-            "spriteSheet": "warrior - idle",
+            "spriteSheet": "warriorIdle",
             "tileHeight": 70,
             "tileWidth": 70,
             "frameCount": 32,
@@ -196,7 +196,7 @@
 
         "idleLoop":
         {
-            "spriteSheet": "warrior - idleLoop",
+            "spriteSheet": "warriorIdleLoop",
             "tileHeight": 65,
             "tileWidth": 65,
             "frameCount": 16,
@@ -206,7 +206,7 @@
 
         "idleAction1":
         {
-            "spriteSheet": "warrior - idleAction1",
+            "spriteSheet": "warriorIdleAction1",
             "tileHeight": 75,
             "tileWidth": 75,
             "frameCount": 16,
@@ -219,7 +219,7 @@
 
         "run":
         {
-            "spriteSheet": "warrior - run",
+            "spriteSheet": "warriorRun",
             "tileHeight": 75,
             "tileWidth": 75,
             "frameCount": 16,
@@ -229,7 +229,7 @@
 
         "attack":
         {
-            "spriteSheet": "warrior - attack",
+            "spriteSheet": "warriorAttack",
             "tileHeight": 80,
             "tileWidth": 80,
             "frameCount": 32,
@@ -238,7 +238,7 @@
 
         "overhead":
         {
-            "spriteSheet": "warrior - overhead",
+            "spriteSheet": "warriorOverhead",
             "tileHeight": 85,
             "tileWidth": 85,
             "frameCount": 32,
@@ -251,7 +251,7 @@
 
         "death":
         {
-            "spriteSheet": "warrior - death",
+            "spriteSheet": "warriorDeath",
             "tileHeight": 75,
             "tileWidth": 75,
             "frameCount": 32,

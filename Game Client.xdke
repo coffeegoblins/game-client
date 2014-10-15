@@ -1,0 +1,13 @@
+{
+  "project": {
+    "projectFiles": {},
+    "projectDirectories": {},
+    "projectSettingsVersion": "1.1",
+    "initialAutoPluginCount": 0,
+    "currentService": {
+      "methodapi": "",
+      "endPoint": "Live-Update",
+      "service": "appmobi"
+    }
+  }
+}

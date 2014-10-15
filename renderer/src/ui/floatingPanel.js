@@ -54,7 +54,7 @@ define(['core/src/events', 'renderer/src/renderer', 'core/src/scheduler'], funct
         this.updatePosition();
         this.show();
 
-        // Scheduler.schedule(this.updateEventData);
+        Scheduler.schedule(this.updateEventData);
     };
 
     FloatingPanel.prototype.show = function ()

@@ -1,3 +1,5 @@
+require.nodeRequire = window.requireNode;
+
 require.config(
 {
     baseUrl: '',
