@@ -130,7 +130,7 @@ define([
                 else
                 {
                     this.currentAttack = action;
-                    this.availableNodes = this.gameLogic.attacks[action.name.toLowerCase()].getAttackNodes(this.currentMap, unit);
+                    this.availableNodes = this.gameLogic.attacks[action.name].getAttackNodes(this.currentMap, unit);
 
                     Renderer.addRenderablePath('attack', this.availableNodes, false);
                     this.currentMap.on('tileClick', this, this.onAttackTileSelected);
