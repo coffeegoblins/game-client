@@ -13,13 +13,18 @@ define(['./floatingPanel'], function (FloatingPanel)
         this.confirmationElement.className = 'action disabled';
         this.confirmationElement.title = 'Confirm';
         this.confirmationElement.setAttribute('data-action-name', 'confirm');
-        this.element.appendChild(this.confirmationElement);
+        this.confirmationElement.style.backgroundImage = 'url(renderer/content/images/confirmIcon.png)';
+        this.confirmationElement.style.left = "-96px";
 
-        var cancelElement = document.createElement('div');
-        cancelElement.className = 'action';
-        cancelElement.title = 'Cancel';
-        cancelElement.setAttribute('data-action-name', 'cancel');
-        this.element.appendChild(cancelElement);
+        this.cancelElement = document.createElement('div');
+        this.cancelElement.className = 'action';
+        this.cancelElement.title = 'Cancel';
+        this.cancelElement.setAttribute('data-action-name', 'cancel');
+        this.cancelElement.style.backgroundImage = 'url(renderer/content/images/cancelIcon.png)';
+        this.cancelElement.style.left = "96px";
+
+        this.element.appendChild(this.confirmationElement);
+        this.element.appendChild(this.cancelElement);
     }
 
     ConfirmationPanel.prototype = Object.create(FloatingPanel.prototype);

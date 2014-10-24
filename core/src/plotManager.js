@@ -157,8 +157,11 @@ define([
                     this.selectedNode = this.selectedNodes[this.selectedNodes.length - 1];
                     this.actionPanel.target.statusPanel.previewAP(this.gameLogic.getMoveCost(this.actionPanel.target, this.selectedNode.distance));
 
-                    this.confirmationPanel.enableConfirm();
                     Renderer.addRenderablePath('selectedPath', this.selectedNodes, true);
+                    Renderer.camera.moveToUnit(this.selectedNode, function ()
+                    {
+                        this.confirmationPanel.enableConfirm();
+                    }.bind(this), 0.5);
                 }
                 else
                 {
