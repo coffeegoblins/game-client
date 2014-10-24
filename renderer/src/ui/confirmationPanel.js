@@ -17,7 +17,7 @@ define(['./floatingPanel'], function (FloatingPanel)
         this.confirmationElement.style.left = "-96px";
 
         this.cancelElement = document.createElement('div');
-        this.cancelElement.className = 'action';
+        this.cancelElement.className = 'action disabled';
         this.cancelElement.title = 'Cancel';
         this.cancelElement.setAttribute('data-action-name', 'cancel');
         this.cancelElement.style.backgroundImage = 'url(renderer/content/images/cancelIcon.png)';
@@ -33,11 +33,13 @@ define(['./floatingPanel'], function (FloatingPanel)
     ConfirmationPanel.prototype.disableConfirm = function ()
     {
         this.confirmationElement.classList.add('disabled');
+        this.cancelElement.classList.add('disabled');
     };
 
     ConfirmationPanel.prototype.enableConfirm = function ()
     {
         this.confirmationElement.classList.remove('disabled');
+        this.cancelElement.classList.remove('disabled');
     };
 
     ConfirmationPanel.prototype.onActionClick = function (e)

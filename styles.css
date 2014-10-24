@@ -136,7 +136,7 @@ input[type="range"]:disabled {
     background-position: center;
 }
 .action.disabled {
-    opacity: 0.5;
+    opacity: 0;
     pointer-events: none;
 }
 .confirmation-panel .action {
