@@ -145,6 +145,8 @@ define([
             {
                 Renderer.clearRenderablePathById('selectedPath');
 
+                this.actionPanel.target.statusPanel.previewAP();
+                this.confirmationPanel.disableConfirm();
                 this.confirmationPanel.target = {
                     x: x,
                     y: y
@@ -162,11 +164,6 @@ define([
                     {
                         this.confirmationPanel.enableConfirm();
                     }.bind(this), 0.5);
-                }
-                else
-                {
-                    this.actionPanel.target.statusPanel.previewAP();
-                    this.confirmationPanel.disableConfirm();
                 }
             },
 
