@@ -93,9 +93,9 @@ define(['renderer/src/renderer', './scheduler'],
             });
         };
 
-        UnitActions.prototype.attack = function (unit, targetNode, attackName, onAttackComplete)
+        UnitActions.prototype.attack = function (unit, targetNode, attackName, hitChance, onAttackComplete)
         {
-            var results = this.gameLogic.attacks[attackName].performAttack(unit, targetNode);
+            var results = this.gameLogic.attacks[attackName].performAttack(unit, targetNode, hitChance);
 
             unit.setState('attack');
             // TODO SoundManager.playTrack(attack.track);

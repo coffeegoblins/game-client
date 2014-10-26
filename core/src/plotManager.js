@@ -108,6 +108,8 @@ define([
                 }
 
                 this.actionPanel.open(unit, this.gameLogic.getAttacks(unit));
+
+                this.resetActionState();
             },
 
             onActionSelected: function (unit, action)
@@ -123,22 +125,19 @@ define([
 
                 if (action.name === 'move')
                 {
-                    this.availableNodes = this.gameLogic.getMoveNodes(this.currentMap, unit);
-                    Renderer.addRenderablePath('moveTiles', this.availableNodes, false);
+                    Renderer.addRenderablePath('moveTiles', this.availableMoveNodes, false);
                     this.currentMap.on('tileClick', this, this.onMoveTileSelected);
                 }
                 else
                 {
                     this.currentAttack = action;
-                    this.availableNodes = this.gameLogic.attacks[action.name].getAttackNodes(this.currentMap, unit);
-
-                    Renderer.addRenderablePath('attack', this.availableNodes, false);
+                    Renderer.addRenderablePath('attack', this.availableAttackNodes[action.name], false);
                     this.currentMap.on('tileClick', this, this.onAttackTileSelected);
                 }
 
                 this.confirmationPanel = new ConfirmationPanel();
                 this.confirmationPanel.on('actionSelected', this, this.onPerformActionSelected);
-                this.confirmationPanel.open(unit);
+                this.confirmationPanel.showCancel(unit);
             },
 
             onMoveTileSelected: function (tile, x, y)
@@ -152,7 +151,7 @@ define([
                     y: y
                 };
 
-                var pathNode = tile && Utility.getElementByProperty(this.availableNodes, 'tile', tile);
+                var pathNode = tile && Utility.getElementByProperty(this.availableMoveNodes, 'tile', tile);
                 if (pathNode)
                 {
                     this.selectedNodes = this.gameLogic.calculatePathFromNodes(pathNode, this.actionPanel.target.x, this.actionPanel.target.y);
@@ -164,6 +163,10 @@ define([
                     {
                         this.confirmationPanel.enableConfirm();
                     }.bind(this), 0.5);
+                }
+                else
+                {
+                    this.confirmationPanel.showCancel(this.actionPanel.target);
                 }
             },
 
@@ -201,10 +204,29 @@ define([
                 this.selectedNode = null;
                 this.selectedNodes = null;
                 this.currentAttack = null;
-                this.availableNodes = null;
+                this.availableAttackNodes = {};
 
+                var unit = this.turnManager.activeUnit;
+
+                this.availableMoveNodes = this.gameLogic.getMoveNodes(this.currentMap, unit);
+                if (this.availableMoveNodes.length === 0)
+                {
+                    this.actionPanel.disableAction('move');
+                }
+
+                var attacks = this.gameLogic.getAttacks(unit);
+                for (var i = 0; i < attacks.length; ++i)
+                {
+                    var attack = attacks[i];
+                    this.availableAttackNodes[attack.name] = this.gameLogic.attacks[attack.name].getAttackNodes(this.currentMap, unit);
+                    if (this.availableAttackNodes[attack.name].length === 0)
+                    {
+                        this.actionPanel.disableAction(attack.name);
+                    }
+                }
+
+                unit.statusPanel.previewAP();
                 Renderer.clearRenderablePaths();
-                this.actionPanel.target.statusPanel.previewAP();
                 this.actionPanel.updateActions();
                 this.actionPanel.show();
 
@@ -215,12 +237,15 @@ define([
 
             onAttackTileSelected: function (tile, x, y)
             {
-                this.selectedNode = tile && Utility.getElementByProperty(this.availableNodes, 'tile', tile);
+                this.selectedNode = tile && Utility.getElementByProperty(this.availableAttackNodes[this.currentAttack.name], 'tile', tile);
                 if (!this.selectedNode)
                 {
+                    this.confirmationPanel.disableConfirm();
+                    this.confirmationPanel.showCancel(this.turnManager.activeUnit);
                     return;
                 }
 
+                this.confirmationPanel.disableConfirm();
 
                 Renderer.clearRenderablePathById('selectedAttackNodes');
 
@@ -231,12 +256,15 @@ define([
 
                 var attackName = this.currentAttack.name.toLowerCase();
 
-                this.selectedNodes = this.gameLogic.attacks[attackName].getAttackNodes(this.currentMap, this.turnManager.activeUnit);
+                this.selectedNodes = this.gameLogic.attacks[attackName].getTargetNodes(this.selectedNode);
                 var hasTarget = this.gameLogic.hasTarget(this.selectedNodes);
 
                 if (hasTarget)
                 {
-                    this.confirmationPanel.enableConfirm();
+                    Renderer.camera.moveToUnit(this.confirmationPanel.target, function ()
+                    {
+                        this.confirmationPanel.enableConfirm();
+                    }.bind(this), 0.5);
 
                     var baseCost = this.gameLogic.attacks[attackName].attackCost;
                     var totalCost = this.gameLogic.getAttackCost(this.turnManager.activeUnit, this.selectedNode, baseCost);
@@ -247,7 +275,7 @@ define([
                 else
                 {
                     this.turnManager.activeUnit.statusPanel.previewAP();
-                    this.confirmationPanel.disableConfirm();
+                    this.confirmationPanel.showCancel(this.turnManager.activeUnit);
                 }
             },
 
@@ -258,7 +286,9 @@ define([
                 this.actionPanel.hide();
                 this.turnManager.activeUnit.statusPanel.previewAP();
 
-                this.unitActions.attack(this.turnManager.activeUnit, this.selectedNode, this.currentAttack.name, this.resetActionState.bind(this));
+                var hitChance = this.gameLogic.nextRandom(this.currentGame);
+
+                this.unitActions.attack(this.turnManager.activeUnit, this.selectedNode, this.currentAttack.name, hitChance, this.resetActionState.bind(this));
                 this.onLocalUnitAttack(this.turnManager.activeUnit, this.selectedNode, this.currentAttack.name);
             },
 
@@ -326,11 +356,11 @@ define([
                 case "move":
                     {
                         var unit = this.turnManager.activeUnit;
-                        this.availableNodes = this.gameLogic.getMoveNodes(this.currentMap, unit);
+                        var moveNodes = this.gameLogic.getMoveNodes(this.currentMap, unit);
 
-                        for (var i = 0; i < this.availableNodes.length; ++i)
+                        for (var i = 0; i < moveNodes.length; ++i)
                         {
-                            var node = this.availableNodes[i];
+                            var node = moveNodes[i];
                             if (node.x === action.x && node.y === action.y)
                             {
                                 this.selectedNodes = this.gameLogic.calculatePathFromNodes(node, unit.x, unit.y);

@@ -134,10 +134,14 @@ input[type="range"]:disabled {
     -webkit-border-radius: 10px;
     background-repeat: no-repeat;
     background-position: center;
+    -webkit-transition: top 0.5s, left 0.5s, opacity 0.5s;
+    transition: top 0.5s, left 0.5s, opacity 0.5s;
 }
 .action.disabled {
-    opacity: 0;
+    opacity: 0.25;
     pointer-events: none;
+    -webkit-transition: none;
+    transition: none;
 }
 .confirmation-panel .action {
     display: inline-block;
@@ -148,8 +152,6 @@ input[type="range"]:disabled {
     height: 64px;
     top: 0;
     left: 0;
-    -webkit-transition: top 0.5s, left 0.5s;
-    transition: top 0.5s, left 0.5s;
 }
 .outerBar {
     position: relative;

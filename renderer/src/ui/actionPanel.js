@@ -64,32 +64,6 @@ define(['./floatingPanel', 'core/src/spriteSheet'], function (FloatingPanel, Spr
         var radius = 96;
         var angle = 0;
 
-
-        //        .action - panel.isVisible.action: nth - child(1)
-        //        {
-        //            top: -96px;
-        //        }
-        //            .action - panel.isVisible.action: nth - child(2)
-        //            {
-        //                left: 91px;
-        //                top: -20px;
-        //        }
-        //            .action - panel.isVisible.action.action: nth - child(3)
-        //            {
-        //                left: 56px;
-        //                top: 67px;
-        //        }
-        //            .action - panel.isVisible.action.action: nth - child(4)
-        //            {
-        //                left: -56px;
-        //                top: 67px;
-        //        }
-        //            .action - panel.isVisible.action.action: nth - child(5)
-        //            {
-        //                left: -91px;
-        //                top: -20px;
-        //        }
-
         for (var i = 0; i < this.actions.length; i++)
         {
             var action = this.actions[i];
@@ -118,13 +92,34 @@ define(['./floatingPanel', 'core/src/spriteSheet'], function (FloatingPanel, Spr
         for (var i = 0; i < this.actions.length; i++)
         {
             var action = this.actions[i];
-            if (action.cost !== null)
+            var actionElement;
+
+            if (action.attackCost != null)
             {
-                var actionElement = this.element.children[i];
-                if (action.cost > this.target.ap)
+                actionElement = this.element.children[i];
+                if (action.attackCost > this.target.ap)
                     actionElement.classList.add('disabled');
                 else
                     actionElement.classList.remove('disabled');
+            }
+
+            if (action.isDisabled)
+            {
+                actionElement = this.element.children[i];
+                actionElement.classList.add('disabled');
+            }
+        }
+    };
+
+    ActionPanel.prototype.disableAction = function (actionName)
+    {
+        for (var i = 0; i < this.actions.length; i++)
+        {
+            var action = this.actions[i];
+
+            if (action.name === actionName)
+            {
+                this.element.children[i].classList.add('disabled');
             }
         }
     };
